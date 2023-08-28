@@ -19,3 +19,7 @@ use App\Http\Controllers\HomeController;
 // });
 
 Route::get('/' , [HomeController::class , "index"]);
+
+Route::get('/register/{event_id}' , [HomeController::class , "register"]);
+
+Route::post('/register' , [HomeController::class , "insert"]);
