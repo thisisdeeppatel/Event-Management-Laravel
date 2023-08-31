@@ -2,14 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Location;
+use App\Models\Event;
+use App\Models\Registration;
 use Illuminate\Http\Request;
+
 
 class HomeController extends Controller
 {
     //
     public function index()
     {
-        return view("home.index");
+        //$d= Registration::all()->getEvent;
+        // $d = Registration::with('getEvent',"getLocation")->get();
+
+        $d = Event::with('getLocation' , "getParticipants")->get();
+        return $d;
+       // return view("home.index");
     }
 
     public function register(Request $request)

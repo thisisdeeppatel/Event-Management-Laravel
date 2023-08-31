@@ -8,6 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     protected $table = "events";
-    protected $primary_key = "event_id";
+    protected $primaryKey = "event_id";
     use HasFactory;
+
+
+    function getLocation()
+    {
+        return $this->hasOne("App\Models\Location" , "location_id");
+    }
+
+    function getParticipants()
+    {
+        return $this->hasMany("App\Models\Registration" , "event_id");
+    }
 }
