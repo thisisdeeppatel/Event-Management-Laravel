@@ -13,12 +13,16 @@ class HomeController extends Controller
     //
     public function index()
     {
-        //$d= Registration::all()->getEvent;
+        // ##### FOR API
         // $d = Registration::with('getEvent',"getLocation")->get();
+        //$d = Event::with('getLocation' , "getParticipants")->get();
+        //return $d;
 
-        $d = Event::with('getLocation' , "getParticipants")->get();
-        return $d;
-       // return view("home.index");
+        // inner join events and location table
+        $events = Event::select("events.*" , "locations.location_id", "locations.name as location_name", "locations.nav_url" )->join("locations" , "events.location_id" ,"=" , "locations.location_id")->get();
+
+        $data = compact("events");
+       return view("home.index")->with($data);
     }
 
     public function register(Request $request)

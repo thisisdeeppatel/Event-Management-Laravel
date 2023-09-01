@@ -18,6 +18,6 @@ class Registration extends Model
 
     function getLocation()
     {
-        return $this->hasone("App\Models\Location" , "location_id");
+        return $this->hasOne("App\Models\Location" , "location_id");
     }
 }
