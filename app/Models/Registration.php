@@ -11,13 +11,13 @@ class Registration extends Model
     protected $primaryKey = "registration_id";
     use HasFactory;
 
-    function getEvent()
+    function event()
     {
-       return $this->hasOne("App\Models\Event" , "event_id"); // adds the event associated with the Registration
+       return $this->belongsTo("App\Models\Event" , "event_id"); // adds the event associated with the Registration
     }
 
-    function getLocation()
+    function location()
     {
-        return $this->hasOne("App\Models\Location" , "location_id");
+        return $this->belongsTo("App\Models\Location" , "location_id");
     }
 }

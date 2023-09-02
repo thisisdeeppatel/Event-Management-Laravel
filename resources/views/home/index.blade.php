@@ -14,7 +14,7 @@
     <br><br>
 
 
-    {{$event->name}} || at {{ $event->location_name }}|| date {{$event->date}} ||time {{$event->time}} || info/register {{url("/")}}/register/{{$event->event_id}} || nav_url {{$event->nav_url}}
+    {{$event->name}} || at {{ $event->location->name }}|| date {{$event->date}} ||time {{$event->time}} || info/register {{url("/")}}/register/{{$event->event_id}} || nav_url {{$event->location->nav_url}}
 @endforeach
 
 
