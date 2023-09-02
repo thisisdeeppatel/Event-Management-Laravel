@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreign("location_id")->references("location_id")->on("locations");
             // id column has unsignedbiginteger so here must be same.
             $table->string("name");
+            $table->string("type");
             $table->text("info");
             $table->date("date");
             $table->time("time");
