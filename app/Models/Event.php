@@ -11,6 +11,16 @@ class Event extends Model
     protected $primaryKey = "event_id";
     use HasFactory;
 
+    // remove this if not working
+    protected $fillable = [
+        'name',
+        'location_id',
+        'type',
+        'info',
+        'date',
+        'time',
+        'is_complete'
+    ];
 
     function location()
     {
