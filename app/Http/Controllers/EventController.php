@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Registration;
 use Illuminate\Http\Request;
 use App\Models\Event;
+
 class EventController extends Controller
 {
     public function add(Request $request)
@@ -20,6 +22,16 @@ class EventController extends Controller
         $event->save();
 
         return view("dashboard.index");
+
+    }
+
+
+    public function view_all($event_id)
+    {
+        $regs = Registration::where("event_id" , $event_id)->get();
+
+        $data = compact('regs');
+        return view("dashboard.events.view_participants")->with($data);
 
     }
 }

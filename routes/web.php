@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +20,8 @@ use App\Http\Controllers\HomeController;
 //     return view('welcome');
 // });
 
+
+// Routes for home Page
 Route::get('/' , [HomeController::class , "index"]);
 
 Route::get('/register/{event_id}' , [HomeController::class , "register"]);
@@ -30,7 +34,12 @@ Route::post('/certificate' , [HomeController::class , "certificate_gen"]);
 
 
 
+// Routes for Dashboard
 
+Route::get("/dashboard" , [DashboardController::class , "index"]);
+
+// routes for dashboard/event
+Route::get("/dashboard/event/participants/{event_id}" , [EventController::class , "view_all"]);
 
 // FOR APIS
 Route::get('/test' , [HomeController::class , "test"]);
