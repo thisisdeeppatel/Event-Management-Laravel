@@ -6,6 +6,7 @@ use App\Models\Location;
 use App\Models\Event;
 use App\Models\Registration;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 
 class HomeController extends Controller
@@ -50,6 +51,51 @@ class HomeController extends Controller
         //compact here
         return view("home.register_ok" , ['reg_id' => $new_reg_id]);
     }
+
+
+
+
+
+    public function certificate_home($reg_id = " ")
+    {
+
+        return view("home.certificate" , ["reg_id" => $reg_id]);
+    }
+
+    public function certificate_gen(Request $request)
+    {
+        // fetch registraion with event as relation
+        // find location.
+        // make url
+        // redirect to url
+        $reg_id = $request['reg_id'];
+        $reg = Registration::where("registration_id" , $reg_id)->with("event")->first();
+
+        $location = Location::where("location_id" , $reg->event->location_id)->first();
+
+        if($reg->event->is_complete == 0)
+            return "<h1 style='text-align:center;margin:100px'>  EVENT NOT COMPLETED YET </h1>";
+
+        $user = $reg->full_name;
+        $location_name = $location->name;
+        $event_name = $reg->event->name;
+        $date = $reg->event->date;
+
+        // Concatnation to build custom url
+        $final_url = "static/"."generate.php"."?user=$user&location=$location_name&ename=$event_name&date=$date";
+        $final_url2 = $final_url . "&verify=".url("/")."/certificate/".$reg_id;
+
+        // redirect to this custom url
+        return Redirect::to($final_url2);
+
+    }
+
+
+
+
+
+
+
 
 
     public function test()

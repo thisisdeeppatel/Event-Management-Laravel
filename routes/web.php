@@ -24,4 +24,13 @@ Route::get('/register/{event_id}' , [HomeController::class , "register"]);
 
 Route::post('/register' , [HomeController::class , "insert"]);
 
+
+Route::get('/certificate/{reg_id?}' , [HomeController::class , "certificate_home"]);
+Route::post('/certificate' , [HomeController::class , "certificate_gen"]);
+
+
+
+
+
+// FOR APIS
 Route::get('/test' , [HomeController::class , "test"]);
