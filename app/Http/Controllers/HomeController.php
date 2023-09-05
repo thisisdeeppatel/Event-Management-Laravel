@@ -16,7 +16,7 @@ class HomeController extends Controller
     {
         // inner join events and location table
         //$events = Event::select("events.*" , "locations.location_id", "locations.name as location_name", "locations.nav_url" )->join("locations" , "events.location_id" ,"=" , "locations.location_id")->get();
-         $events = Event::all();
+         $events = Event::where("is_complete" , 0)->get();
         $data = compact("events");
        return view("home.index")->with($data);
     }
@@ -36,19 +36,17 @@ class HomeController extends Controller
 
     public function insert(Request $request)
     {
-        $registraion = new Registration;
-        $registraion->event_id= $request->event_id;
-        $registraion->full_name = $request->full_name;
-        $registraion->college = $request->college;
-        $registraion->mobile = $request->mobile;
-        $registraion->email = $request->email;
-        $registraion->designation= $request->designation;
-        $registraion->save();
+        $registration = new Registration;
+        $registration->event_id= $request->event_id;
+        $registration->full_name = $request->full_name;
+        $registration->college = $request->college;
+        $registration->mobile = $request->mobile;
+        $registration->email = $request->email;
+        $registration->designation= $request->designation;
+        $registration->save();
 
+        $new_reg_id =  $registration->registration_id;
 
-        // Access the ID of the inserted row
-        $new_reg_id = $registraion->id;
-        //compact here
         return view("home.register_ok" , ['reg_id' => $new_reg_id]);
     }
 

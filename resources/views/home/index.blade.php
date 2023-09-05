@@ -5,6 +5,8 @@
     @include('static')
 </head>
 <body class="container">
+
+        <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container" >
             <a class="navbar-brand" href="#">Saurashtra University</a>
@@ -14,7 +16,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{url("/")}}">Home</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link " aria-current="page" href="/dashboard">Dashboard</a>
@@ -64,7 +66,10 @@
 
    <h3 style="margin:50px 0px 20px">Event at Glance</h3>
 
-        </div>
+
+
+
+
 </body>
 </html>
 
