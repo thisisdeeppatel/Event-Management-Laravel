@@ -7,38 +7,53 @@
 
     @include("static")
     <script src="{{url("/")}}/static/js/xlsx_0.18.3_xlsx.full.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // datatable init
+            let table = new DataTable('#participantTable', {
+            responsive: true
+            });
+        });
+        </script>
 
 
 </head>
-<body class="container mt-5">
-    <h1 style="justify-self: center;margin-bottom: 50px">Event Participant List</h1>
+<body class="container mt-1 ">
+    <h1 style="">Event Participant List</h1>
+    <button onclick="exportToExcel()">Export to Excel</button>
     <table id="participantTable" class="table table-hover" >
         <thead>
-            <tr>
+            <tr class="table-primary">
+                <th>Registraion ID</th>
                 <th>Name</th>
                 <th>Mobile Number</th>
                 <th>Email</th>
+                <th>College/Organization</th>
+                <th>Designation</th>
             </tr>
         </thead>
         <tbody>
 
             @foreach ($regs as $reg)
             <tr>
+                <td>{{$reg->registration_id}}</td>
                 <td>{{$reg->full_name}}</td>
                 <td>{{$reg->mobile}}</td>
                 <td>{{$reg->email}}</td>
+                <td>{{$reg->college}}</td>
+                <td>{{$reg->designation}}</td>
             </tr>
             @endforeach
 
         </tbody>
     </table>
-    <button onclick="exportToExcel()">Export to Excel</button>
+
 
     <script>
         function exportToExcel() {
             const table = document.getElementById('participantTable');
             const wb = XLSX.utils.table_to_book(table, { sheet: 'Participants' });
-            XLSX.writeFile(wb, 'event_participants.xlsx');
+            XLSX.writeFile(wb, 'event_peoples.xlsx');
         }
     </script>
 </body>

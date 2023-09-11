@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\LocationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,5 +42,9 @@ Route::get("/dashboard" , [DashboardController::class , "index"]);
 // routes for dashboard/event
 Route::get("/dashboard/event/participants/{event_id}" , [EventController::class , "view_all"]);
 
+
+Route::get("/dashboard/location/add" , [LocationController::class , "add_frm"]);
+Route::post("/dashboard/location/add" , [LocationController::class , "add"]);
+Route::get("/dashboard/location/view_all" , [LocationController::class , "view_all"]);
 // FOR APIS
 Route::get('/test' , [HomeController::class , "test"]);

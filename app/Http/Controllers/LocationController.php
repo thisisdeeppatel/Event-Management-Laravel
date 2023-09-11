@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\models\Location;
+use Illuminate\Support\Facades\Redirect;
 
 class LocationController extends Controller
 {
@@ -20,5 +21,20 @@ class LocationController extends Controller
         $location->nav_url = $nav_url_new;
 
         $location->save();
+
+        $final_url2 = url("/") . "/dashboard";
+        return Redirect::to($final_url2);
+    }
+
+    public function add_frm()
+    {
+        return view("dashboard.location.add");
+    }
+
+    public function view_all()
+    {
+        $location = Location::all();
+        $data = compact("location");
+        return view("dashboard.location.view_all")->with($data);
     }
 }

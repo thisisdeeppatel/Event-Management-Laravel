@@ -54,7 +54,8 @@
                     <td>{{ $event->location->name }}</td>
                     <td>{{$event->type}} </td>
                     <td>{{$event->date}}</td>
-                    <td>{{$event->time}} </td>
+                    <!-- date('h:i A', intval($event->time)) -->
+                    <td>{{ $event->time }} </td>
                     <td><a href="{{url("/")}}/register/{{$event->event_id}}" class="btn btn-primary">Register</a></td>
                     <td><a href="{{$event->location->nav_url}}" class="btn btn-primary">Navigation</a></td>
                 <tr>
