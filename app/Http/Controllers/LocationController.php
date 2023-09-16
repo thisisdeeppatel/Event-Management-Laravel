@@ -37,4 +37,23 @@ class LocationController extends Controller
         $data = compact("location");
         return view("dashboard.location.view_all")->with($data);
     }
+
+    public function modify_frm(Request $req, $location_id)
+    {
+        $location = Location::find($location_id);
+        $data = compact('location');
+        return view("dashboard.location.modify")->with($data);
+    }
+
+    public function modify_save(Request $request , $location_id)
+    {
+        $location = Location::find($location_id);
+
+        $location->name = $request['name'];
+        $location->latitude = $request['latitude'];
+        $location->longitude = $request['longitude'];
+
+        $location->save();
+        return Redirect::to("/dashboard/location/view_all");
+    }
 }

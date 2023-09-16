@@ -15,7 +15,6 @@
         <th>name</th>
         <th>latitude</th>
         <th>longitude</th>
-        <th>Delete</th>
         <th>modify</th>
     </tr>
 
@@ -25,8 +24,7 @@
         <td>{{$loc->name}}</td>
         <td>{{$loc->latitude}}</td>
         <td>{{$loc->longitude}}</td>
-        <td>{{$loc->location_id}}</td>
-        <td>{{$loc->location_id}}</td>
+        <td><a class="btn btn-warning" href="{{url("/")}}/dashboard/location/{{$loc->location_id}}">Modify</td>
 
     </tr>
     @endforeach

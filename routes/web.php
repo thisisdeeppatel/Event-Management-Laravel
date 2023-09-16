@@ -39,12 +39,24 @@ Route::post('/certificate' , [HomeController::class , "certificate_gen"]);
 
 Route::get("/dashboard" , [DashboardController::class , "index"]);
 
-// routes for dashboard/event
-Route::get("/dashboard/event/participants/{event_id}" , [EventController::class , "view_all"]);
+
+
 
 
 Route::get("/dashboard/location/add" , [LocationController::class , "add_frm"]);
-Route::post("/dashboard/location/add" , [LocationController::class , "add"]);
+Route::post("/dashboard/location/add" , [LocationController::class , "add"]);//post
 Route::get("/dashboard/location/view_all" , [LocationController::class , "view_all"]);
+
+Route::get("/dashboard/location/{location_id}" , [LocationController::class , "modify_frm"]);
+Route::post("/dashboard/location/update/{location_id}" , [LocationController::class , "modify_save"]);
+
+
+
+Route::get("dashboard/event/add" , [EventController::class , "add_frm"]);
+Route::post("dashboard/event/add" , [EventController::class , "add"]);
+Route::get("/dashboard/event/participants/{event_id}" , [EventController::class , "view_paticipant"]);
+Route::get("/dashboard/event/view_all" , [EventController::class , "view_all"]);
+Route::get("/dashboard/event/{event_id}" ,[EventController::class, "modify_frm"]);
+Route::post("/dashboard/event/update/{event_id}" ,[EventController::class, "modify_save"]);
 // FOR APIS
 Route::get('/test' , [HomeController::class , "test"]);

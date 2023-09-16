@@ -10,22 +10,25 @@
 <body>
     <div class="container mt-5">
         <h2>Add Location</h2>
-        <form action="/dashboard/location/add" method="post">
+        <form action="/dashboard/location/update/{{$location->location_id}}" method="post">
             @csrf
             <div class="form-group col-md-4 mt-2">
                 <label >Location Name</label>
-                <input type="text" class="form-control" name="name" placeholder="Enter Location Name" required>
+                <input type="text" class="form-control" name="name" value="{{$location->name}}" placeholder="Enter Location Name">
             </div>
             <div class="form-group col-md-4 mt-2">
                 <label >Latitude</label>
-                <input type="text" class="form-control" name="latitude" placeholder="Enter Latitude" required>
+                <input type="text" class="form-control" name="latitude" value="{{$location->latitude}}" placeholder="Enter Latitude">
             </div>
             <div class="form-group col-md-4 mt-2">
                 <label >Longitude</label>
-                <input type="text" class="form-control" name="longitude" placeholder="Enter Longitude" required>
+                <input type="text" class="form-control" name="longitude" value="{{$location->longitude}}" placeholder="Enter Longitude">
             </div>
-            <button type="submit" class="btn btn-primary mt-2">Add</button>
+            <button type="submit" class="btn btn-primary mt-2">modify</button>
         </form>
     </div>
+
+
+
 </body>
 </html>

@@ -9,7 +9,7 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container" >
-            <a class="navbar-brand" href="#">Events360</a>
+            <a class="navbar-brand" href="#">Event++</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -21,8 +21,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="/dashboard/location/add">Add</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Modify</a>
+
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="/dashboard/location/view_all">View All</a>
                     </div>
@@ -32,11 +31,10 @@
                       Event
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Add</a>
+                      <a class="dropdown-item" href="/dashboard/event/add">Add</a>
+
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Modify</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">View All</a>
+                      <a class="dropdown-item" href="/dashboard/event/view_all">View All</a>
                     </div>
                   </li>
 
