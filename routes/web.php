@@ -54,9 +54,9 @@ Route::post("/dashboard/location/update/{location_id}" , [LocationController::cl
 
 Route::get("dashboard/event/add" , [EventController::class , "add_frm"]);
 Route::post("dashboard/event/add" , [EventController::class , "add"]);
-Route::get("/dashboard/event/participants/{event_id}" , [EventController::class , "view_paticipant"]);
+Route::get("/dashboard/event/participants/{event_id}" , [EventController::class , "view_participants"]);
 Route::get("/dashboard/event/view_all" , [EventController::class , "view_all"]);
 Route::get("/dashboard/event/{event_id}" ,[EventController::class, "modify_frm"]);
 Route::post("/dashboard/event/update/{event_id}" ,[EventController::class, "modify_save"]);
 // FOR APIS
-Route::get('/test' , [HomeController::class , "test"]);
+Route::get('/mapdata' , [HomeController::class , "mapdata"]);

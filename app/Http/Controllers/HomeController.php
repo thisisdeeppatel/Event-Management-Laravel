@@ -96,10 +96,10 @@ class HomeController extends Controller
 
 
 
-    public function test()
+    public function mapdata()
     {
         // get all events with location and registration API
-        $data = Event::with('location' , 'registration')->get();
+        $data = Event::where("is_complete" , "0")->with('location')->get();
         return $data;
     }
 }

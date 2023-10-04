@@ -3,13 +3,13 @@
 <head>
     @include("static")
 </head>
-<body class="container">
+<body class="container-fluid">
 
     {{-- navbar --}}
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container" >
-            <a class="navbar-brand" href="#">Event++</a>
+
+            <a class="navbar-brand" href="/dashboard">Event++</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,9 +44,9 @@
         </div>
         </nav>
 
-    <div>
+    <div class="container"><!--To make smaller width -->
         <h3 style="margin-top:50px">Upcoming Events</h3>
-        <table class="table table-hover  table-bordered" style="margin-top:20px"  >
+        <table class="table table-hover  table-bordered container" style="margin-top:20px"  >
           <thead>
               <tr class="table-primary">
 
@@ -84,17 +84,17 @@
      </table>
 
      <h3 style="margin-top:50px">Completed</h3>
-     <table class="table table-hover  table-bordered" style="margin-top:20px"  >
+     <table class="table table-hover  table-bordered container" style="margin-top:20px"  >
        <thead>
            <tr class="table-primary">
 
-             <th width="4%">Name</th>
-             <th width="2%">Type</th>
-             <th width="3%">Location</th>
-             <th width="1%">Completed</th>
-             <th width="3%">Date</th>
-             <th width="3%">Time</th>
-             <th width="6%">View Participants</th>
+             <th>Name</th>
+             <th>Type</th>
+             <th>Location</th>
+             <th>Completed</th>
+             <th>Date</th>
+             <th>Time</th>
+             <th>View Participants</th>
 
            </tr>
       </thead>

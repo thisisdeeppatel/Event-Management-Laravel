@@ -28,7 +28,7 @@ class EventController extends Controller
     }
 
 
-    public function view_paticipant($event_id)
+    public function view_participants($event_id)
     {
         $regs = Registration::where("event_id" , $event_id)->get();
 
