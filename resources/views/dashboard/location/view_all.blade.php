@@ -7,7 +7,9 @@
     <title>All locations</title>
     @include("static")
 </head>
-<body class="container">
+<body class="container-fluid">
+
+    @include("dashboard.navbar")
     <h2>All locations</h2>
 <table class="table table-hover table-bordered mt-3">
     <tr>

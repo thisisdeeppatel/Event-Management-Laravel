@@ -5,9 +5,12 @@
 
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Add Event</title>
-        @include("static");
+        @include("static")
     </head>
-    <body>
+    <body class="container-fluid">
+
+        @include("dashboard.navbar")
+
         <div class="container mt-5">
             <h2>Add Event</h2>
             <form action="/dashboard/event/add" method="post">

@@ -17,6 +17,7 @@
 </head>
 <body>
 
+    @include("dashboard.navbar")
 
    <h3 style="margin-top:50px">All events</h3>
    <table id="eventTable"class="table table-hover  table-bordered" style="margin-top:20px"  >

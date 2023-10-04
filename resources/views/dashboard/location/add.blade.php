@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add Location</title>
-    @include("static");
+    @include("static")
 </head>
 <body>
+
+    @include("dashboard.navbar")
+
+
     <div class="container mt-5">
         <h2>Add Location</h2>
         <form action="/dashboard/location/add" method="post">

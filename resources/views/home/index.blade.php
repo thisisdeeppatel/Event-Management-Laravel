@@ -29,39 +29,7 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid" >
-
-        <a class="navbar-brand mb-0 h1" href="/" style="color: #e26228">Events</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-
-            <ul class="navbar-nav">
-
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{url("/")}}">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/certificate">Get Certificate</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="d-flex">
-            <a class="nav-link " aria-current="page" href="/dashboard">Dashboard</a>
-        </div>
-
-    </div>
-</nav>
-
-
-
+@include("home.navbar")
 
 <h3 style="margin:50px 0px 20px;text-align: center">Upcoming Events</h3>
 
@@ -108,19 +76,19 @@
 
 <!-- MAP IMPLEMENTATION -->
 
-<center><div id="mapid" style="height: 500px; width:900px"></div></center>
+<center><div id="mapid" class="shadow" style="height: 500px; width:900px"></div></center>
 <script>
-    //       map // lat , long , zoom level
+    //lat , long , zoom level
     var mymap = L.map('mapid').setView([22.291280100735328, 70.7423523024442], 16);
 
-    // add the  google map tile layer to the map
+    // add the  google map tile layer to the map as documentation
     googleStreets = L.tileLayer('http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}',{
         maxZoom: 20,
         subdomains:['mt0','mt1','mt2','mt3']
     }).addTo(mymap);
 
 
-    // get location data and popup content from api.php as json file on the server
+    // get location data and popup content from API as json file from the server
     fetch('{{url("/")}}/mapdata')
         .then(response => response.json())
         .then(data => {
@@ -134,14 +102,11 @@
 
                 // add popup content to this marker
 
-                //Custom content bind
+                //Custom html content to bind
                 var html = "<h4>"+marker.location.name+"</h4><hr>";
-
                 html+="<h6><b>Event: </b>"+marker.name+"</h6>";
-
                 html+="<hr>"
                 html+="<center><h4><a href='{{url("/")}}/register/"+marker.event_id+"'>Register Now!</a></h4></center>";
-
 
                 mymarker.bindPopup(html);
             });

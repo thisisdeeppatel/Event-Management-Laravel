@@ -19,6 +19,9 @@
 
 </head>
 <body class="container mt-1 ">
+
+    @include("dashboard.navbar")
+
     <h1 style="">Event Participant List</h1>
     <button onclick="exportToExcel()">Export to Excel</button>
     <table id="participantTable" class="table table-hover" >

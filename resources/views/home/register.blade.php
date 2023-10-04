@@ -3,30 +3,9 @@
 <head>
     @include('static')
 </head>
-<body class="container">
+<body class="container-fluid">
 
-     <!-- NAVBAR -->
-     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container" >
-            <a class="navbar-brand" href="#">Saurashtra University</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{url("/")}}">Home</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="/dashboard">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/certificate">Get Certificate</a>
-                </li>
-            </ul>
-            </div>
-        </div>
-        </nav>
+    @include("home.navbar")
 
   <div class="mt-5">
     <div class="row justify-content-center">
