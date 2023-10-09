@@ -11,7 +11,7 @@
 
     @include("dashboard.navbar")
     <div class="container mt-5">
-        <h2>Add Event</h2>
+        <h2>Modify Event</h2>
         <form action="/dashboard/event/update/{{$event->event_id}}" method="post">
             @csrf
             <div class="form-group col-md-4 mt-2">
@@ -43,7 +43,7 @@
 
             <div class="form-group col-md-4 mt-2">
                 <label >Info</label>
-                <input type="text" class="form-control" name="info" value="{{$event->info}}"  placeholder="Enter event info" required>
+                <textarea type="text" class="form-control" style="height:150px" name="info"  placeholder="Enter event info" required >value={{$event->info}}</textarea>
             </div>
             <div class="form-group col-md-4 mt-2">
                 <label >Date</label>
@@ -62,7 +62,7 @@
                     <option value="1">Completed</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary mt-2">Add</button>
+            <button type="submit" class="btn btn-primary mt-2">Modify now</button>
         </form>
     </div>
 </body>

@@ -24,6 +24,34 @@
             max-width: 100%;
             height:200px;
         }
+        h3 {
+        font-family: sans-serif;
+        margin-top:40px;
+        margin-bottom: 50px;
+        text-align: center;
+        color: black;
+        font-size: 40px;
+        flex-direction: column;
+        align-items: center;
+        display:flex;
+        position: relative;
+      }
+
+      h3::after {
+
+        background: #CD5C5C;
+        content: "";
+        position: absolute;
+        top: 110%;
+        width: 15%;
+        height: 5px;
+      }
+
+      .leaflet-control
+      {
+        display: none;
+      }
+
 
     </style>
 </head>
@@ -31,8 +59,21 @@
 
 @include("home.navbar")
 
-<h3 style="margin:50px 0px 20px;text-align: center">Upcoming Events</h3>
 
+<!-- banner -->
+<div>
+    <center>
+    <img src="static/img/1.jpg" class="img-fluid" style="height: 500px; width:100% ;"/>
+    <div style="background: rgba(0,0,0,.6);position:relative;bottom: 100px;height: 50px;text-align: center;">
+
+        <h2 class='text-white'>Events</h2>
+
+    </div>
+    </center>
+</div>
+
+<h3>Upcoming Events</h3>
+<div class="underline"></div>
 <!-- horizinal scrollbar implementation -->
     <div class="container-fluid mt-4">
         <div class="scrolling-container">
@@ -70,13 +111,13 @@
             @endforeach</div>
     </div>
 
-    <h3 style="margin:50px 0px 20px;text-align: center">Event at Glance</h3>
+    <h3>Event at Glance</h3>
 
 
 
 <!-- MAP IMPLEMENTATION -->
 
-<center><div id="mapid" class="shadow" style="height: 500px; width:900px"></div></center>
+<center><div id="mapid" class="shadow" style="height: 500px; width:900px;margin-bottom: 60px"></div></center>
 <script>
     //lat , long , zoom level
     var mymap = L.map('mapid').setView([22.291280100735328, 70.7423523024442], 16);
@@ -126,6 +167,12 @@
         }).catch(error => console.error(error));
 </script>
 
+ <footer class="footer mt-auto py-3 bg-body-tertiary">
+    <div class="text-center p-3">
+    © 2023  Developed By :<span class="text-dark" > Deep Marsonia | Ronak Pipalva</span>
+    </div>
+
+</footer>
 
 </body>
 </html>

@@ -43,7 +43,7 @@
 
                 <div class="form-group col-md-4 mt-2">
                     <label >Info</label>
-                    <input type="text" class="form-control" name="info" placeholder="Enter event info" required>
+                    <textarea type="text" class="form-control" style="height:150px" name="info" placeholder="Enter event info" required ></textarea>
                 </div>
                 <div class="form-group col-md-4 mt-2">
                     <label >Date</label>
