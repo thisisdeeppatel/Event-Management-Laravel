@@ -22,8 +22,8 @@
 
     @include("dashboard.navbar")
 
-    <h1 style="">Event Participant List</h1>
-    <button onclick="exportToExcel()">Export to Excel</button>
+    <h1 class="mt-2">Event Participant List</h1>
+    <button onclick="exportToExcel()" class="btn btn-primary mt-3 mb-3">Export to Excel</button>
     <table id="participantTable" class="table table-hover" >
         <thead>
             <tr class="table-primary">

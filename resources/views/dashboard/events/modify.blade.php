@@ -58,11 +58,11 @@
             <div class="form-group col-md-4 mt-2">
                 <label >Event Status</label>
                 <select class="form-control" name="is_complete">
-                    <option value="0">Not Completed</option>
+                    <option value="0">Pending</option>
                     <option value="1">Completed</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary mt-2">Modify now</button>
+            <button type="submit" class="btn btn-warning mt-2">Modify now</button>
         </form>
     </div>
 </body>
