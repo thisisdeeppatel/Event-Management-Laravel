@@ -43,7 +43,7 @@
 
             <div class="form-group col-md-4 mt-2">
                 <label >Info</label>
-                <textarea type="text" class="form-control" style="height:150px" name="info"  placeholder="Enter event info" required >value={{$event->info}}</textarea>
+                <textarea type="text" class="form-control" style="height:150px" name="info"  placeholder="Enter event info" required >{{$event->info}}</textarea>
             </div>
             <div class="form-group col-md-4 mt-2">
                 <label >Date</label>

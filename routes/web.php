@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,3 +61,15 @@ Route::get("/dashboard/event/{event_id}" ,[EventController::class, "modify_frm"]
 Route::post("/dashboard/event/update/{event_id}" ,[EventController::class, "modify_save"]);
 // FOR APIS
 Route::get('/mapdata' , [HomeController::class , "mapdata"]);
+
+
+// for login
+
+Route::get("/dashboard/login" , [UserController::class , "login_frm"]);
+
+Route::post("/dashboard/login" , [UserController::class , "do_login"]);
+
+Route::get("/dashboard/register" , [UserController::class , "register_frm"]);
+Route::post("/dashboard/register" , [UserController::class , "do_register"]);
+
+Route::get("/dashboard/logout" , [UserController::class , "logout"]);

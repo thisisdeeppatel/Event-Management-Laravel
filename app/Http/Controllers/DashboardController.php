@@ -15,6 +15,11 @@ class DashboardController extends Controller
 
         //get uncomp events with loc;
 
+        if(!auth()->check())
+        {
+            return redirect("/dashboard/login");
+        }
+
         $uncomp_events = Event::where('is_complete' , 0)->with("location" , "registration")->get();
 
         $comp_events = Event::where('is_complete' , 1)->with("location" , "registration")->get();
