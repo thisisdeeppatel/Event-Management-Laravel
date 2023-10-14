@@ -72,7 +72,10 @@ class HomeController extends Controller
         $location = Location::where("location_id" , $reg->event->location_id)->first();
 
         if($reg->event->is_complete == 0)
-            return "<h1 style='text-align:center;margin:100px'>  EVENT NOT COMPLETED YET </h1>";
+        {
+            return view("home.certificate" , ["reg_id" => "" , "err" => "Event Not Mark Completed Yet."]);
+        }
+
 
         $user = $reg->full_name;
         $location_name = $location->name;

@@ -16,7 +16,7 @@
               Location
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/dashboard/location/Overview">Add</a>
+              <a class="dropdown-item" href="/dashboard/location/add">Add</a>
 
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/dashboard/location/view_all">View All</a>

@@ -14,6 +14,7 @@
     <div class="container mt-5" style="margin-bottom:50px">
         <div class="row justify-content-center">
             <div class="col-md-6">
+                <h3 style="color:red; font-weight:bold; text-align:center;">{{$err}}</h3>
                 <div class="card">
                     <div class="card-header">
                         <strong>Download Authentic Certificate:</strong>
