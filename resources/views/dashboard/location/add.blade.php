@@ -29,6 +29,7 @@
                 <input type="text" class="form-control" name="longitude" placeholder="Enter Longitude" required>
             </div>
             <button type="submit" class="btn btn-primary mt-2">Add</button>
+            <a href='{{url()->previous()}}' class="btn btn-primary mt-2 ms-2">Back</a>
         </form>
     </div>
 </body>

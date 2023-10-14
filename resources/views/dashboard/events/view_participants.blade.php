@@ -59,5 +59,9 @@
             XLSX.writeFile(wb, 'event_peoples.xlsx');
         }
     </script>
+
+<div class="w-100 d-flex justify-content-end">
+    <a href='{{url()->previous()}}' class="btn btn-primary mt-2 me-4 float-left">Back</a>
+    </div>
 </body>
 </html>

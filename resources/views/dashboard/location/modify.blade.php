@@ -29,7 +29,8 @@
                 <label >Longitude</label>
                 <input type="text" class="form-control" name="longitude" value="{{$location->longitude}}" placeholder="Enter Longitude">
             </div>
-            <button type="submit" class="btn btn-warning mt-2">modify</button>
+            <button type="submit" class="btn btn-warning mt-2">Modify</button>
+            <a href='{{url()->previous()}}' class="btn btn-primary mt-2 ms-2">Back</a>
         </form>
     </div>
 

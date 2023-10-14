@@ -8,12 +8,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+        </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Location
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/dashboard/location/add">Add</a>
+              <a class="dropdown-item" href="/dashboard/location/Overview">Add</a>
 
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/dashboard/location/view_all">View All</a>
@@ -30,6 +33,9 @@
               <a class="dropdown-item" href="/dashboard/event/view_all">View All</a>
             </div>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">WebApp</a>
+        </li>
     </ul>
     </div>
 </div>
