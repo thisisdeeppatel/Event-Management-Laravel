@@ -38,5 +38,8 @@
         </li>
     </ul>
     </div>
+    <div class="d-flex">
+        <a class="nav-link text-danger" aria-current="page" href="/dashboard/logout">Logout {{auth()->user()->name}}</a>
+    </div>
 </div>
 </nav>

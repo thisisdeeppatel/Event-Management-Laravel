@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Location;
+use App\Models\Location;
 use Illuminate\Support\Facades\Redirect;
 
 class LocationController extends Controller

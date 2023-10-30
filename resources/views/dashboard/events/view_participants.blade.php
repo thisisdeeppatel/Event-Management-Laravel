@@ -18,9 +18,11 @@
 
 
 </head>
-<body class="container mt-1 ">
+<body class="">
 
     @include("dashboard.navbar")
+
+    <div class="container">
 
     <h1 class="mt-2">Event Participant List</h1>
     <button onclick="exportToExcel()" class="btn btn-primary mt-3 mb-3">Export to Excel</button>
@@ -63,5 +65,7 @@
 <div class="w-100 d-flex justify-content-end">
     <a href='{{url()->previous()}}' class="btn btn-primary mt-2 me-4 float-left">Back</a>
     </div>
+
+</div>
 </body>
 </html>
