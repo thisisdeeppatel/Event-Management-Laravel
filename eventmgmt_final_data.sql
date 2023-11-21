@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 12, 2023 at 12:46 PM
+-- Host: localhost
+-- Generation Time: Oct 31, 2023 at 07:13 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -45,9 +45,10 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`event_id`, `location_id`, `name`, `type`, `info`, `date`, `time`, `is_complete`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Laravel Operations', 'Expert Talk', 'value=Expert talk by Dr. Xyz on MVC and some content on api development', '2023-10-04', '13:00:00', 1, '2023-10-11 05:27:39', '2023-10-11 05:34:47'),
-(2, 2, 'Introduction to Microcontrollers', 'Workshop', 'Introduction to Microcontrollers by Prof. ABC and hands on exprience on small project', '2023-10-05', '15:25:00', 0, '2023-10-11 05:29:26', '2023-10-11 05:29:26'),
-(3, 3, 'Application of HPLC in Parma', 'Seminar', 'Application of High perfomance liquid chromatography in Parmaseutical science and drug development v2', '2023-10-07', '10:30:00', 0, '2023-10-11 05:31:10', '2023-10-11 05:38:52');
+(1, 1, 'Laravel Operations', 'Expert Talk', 'Expert talk on Laravel MVC and api development. With hands on Exprience', '2023-11-02', '13:00:00', 0, '2023-10-11 05:27:39', '2023-10-31 00:30:41'),
+(2, 2, 'Introduction to Microcontrollers', 'Workshop', 'Introduction to Microcontrollers by Prof. ABC and hands on exprience on small project', '2023-10-05', '15:25:00', 0, '2023-10-11 05:29:26', '2023-10-31 00:16:50'),
+(3, 3, 'Application of HPLC in Parma', 'Seminar', 'Application of High perfomance liquid chromatography in Parmaseutical science and drug development v2', '2023-10-07', '10:30:00', 0, '2023-10-11 05:31:10', '2023-10-14 12:11:03'),
+(4, 4, 'Introduction to Electrophoresis', 'Workshop', 'Application of electrophoresis in separation of RNA With hands of exprience.', '2023-11-09', '16:59:00', 0, '2023-10-30 23:59:52', '2023-10-31 00:16:33');
 
 -- --------------------------------------------------------
 
@@ -88,7 +89,8 @@ CREATE TABLE `locations` (
 INSERT INTO `locations` (`location_id`, `name`, `latitude`, `longitude`, `nav_url`, `created_at`, `updated_at`) VALUES
 (1, 'Department of Computer Science', '22.29267849379889', '70.74420279329648', 'https://www.google.com/maps/dir//22.29267849379889,70.74420279329648/', '2023-10-11 05:24:34', '2023-10-11 05:24:34'),
 (2, 'Department of Electronics', '22.2924445409422', '70.74396983343054', 'https://www.google.com/maps/dir//22.2924445409422,70.74396983343054/', '2023-10-11 05:25:04', '2023-10-11 05:25:04'),
-(3, 'Department of Chemistry', '22.29172839870684', '70.74302396279147', 'https://www.google.com/maps/dir//22.29172839870684,70.74302396279147/', '2023-10-11 05:25:38', '2023-10-11 05:25:38');
+(3, 'Department of Chemistry', '22.29172839870684', '70.74302396279147', 'https://www.google.com/maps/dir//22.29172839870684,70.74302396279147/', '2023-10-11 05:25:38', '2023-10-11 05:25:38'),
+(4, 'Department of BioChemistry', '22.291170425929373', '70.74367578050314', 'https://www.google.com/maps/dir//22.291170425929373,70.74367578050314/', '2023-10-30 23:58:33', '2023-10-31 00:23:32');
 
 -- --------------------------------------------------------
 
@@ -171,7 +173,13 @@ CREATE TABLE `registrations` (
 INSERT INTO `registrations` (`registration_id`, `event_id`, `full_name`, `mobile`, `email`, `college`, `designation`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Ronak Pipalva', '8877688566', 'user2@test.com', 'Saurashra university', 'Aspirant', '2023-10-11 05:32:50', '2023-10-11 05:32:50'),
 (2, 1, 'Deep Patel', 'sdffds566', 'usdasda@test.com', 'Saurashra university', 'Dr.', '2023-10-11 05:33:29', '2023-10-11 05:33:29'),
-(3, 3, 'Deep Patel', '4w253455', 'user2@test.com', 'MArwadi university', 'Dr.', '2023-10-11 05:34:02', '2023-10-11 05:34:02');
+(3, 3, 'Deep Patel', '4w253455', 'user2@test.com', 'MArwadi university', 'Dr.', '2023-10-11 05:34:02', '2023-10-11 05:34:02'),
+(4, 4, 'ronak', '87800950796', 'ronak@gmmail.com', 'saurashtra uni.', 'stud', '2023-10-31 00:01:08', '2023-10-31 00:01:08'),
+(5, 2, 'ronak pipalva', '344234234', 'ronak@gmail.com', 'Saurashtra uni', 'St.', '2023-10-31 00:17:55', '2023-10-31 00:17:55'),
+(6, 2, 'Deep Marsonia', '92837984', 'deep@gmail.com', 'Saurashtra uni', 'St.', '2023-10-31 00:18:16', '2023-10-31 00:18:16'),
+(7, 3, 'ronak pipalva', '92348727346', 'ronak@gmail.com', 'Saurashra university', 'St.', '2023-10-31 00:18:58', '2023-10-31 00:18:58'),
+(8, 4, 'Deep Marsonia', '83476837234', 'deep@gmailc.om', 'Saurashra university', 'St.', '2023-10-31 00:20:00', '2023-10-31 00:20:00'),
+(9, 1, 'Ajay', '8768997955', 'Ajay@gmail.com', 'Saurashra university', 'Student', '2023-10-31 00:28:40', '2023-10-31 00:28:40');
 
 -- --------------------------------------------------------
 
@@ -195,7 +203,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'deep', 'test@test.com', NULL, '$2y$10$686P/1de1IRNhilkWm7p/.Aio2KfhgwsaSpm5pKYsO3iWQHPv9usy', NULL, '2023-10-11 07:00:49', '2023-10-11 07:00:49');
+(1, 'deep', 'test@test.com', NULL, '$2y$10$686P/1de1IRNhilkWm7p/.Aio2KfhgwsaSpm5pKYsO3iWQHPv9usy', NULL, '2023-10-11 07:00:49', '2023-10-11 07:00:49'),
+(2, 'ronak', 'ronak@gmail.com', NULL, '$2y$10$6Yg6EgDqIpLsBWQpmx7One0p2WBfBBx2ubxvOo7mWbgWRAprHXrFO', NULL, '2023-10-31 00:25:30', '2023-10-31 00:25:30'),
+(3, 'admin', 'admin@gmail.com', NULL, '$2y$10$d0bTeaJRh5kDFwcfcmNXwu9c1DB1NpiDJ0qgWKWcwWmvS.nGfBwhe', NULL, '2023-10-31 00:25:52', '2023-10-31 00:25:52');
 
 --
 -- Indexes for dumped tables
@@ -263,7 +273,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `event_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `event_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -275,7 +285,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `locations`
 --
 ALTER TABLE `locations`
-  MODIFY `location_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `location_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -293,13 +303,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `registrations`
 --
 ALTER TABLE `registrations`
-  MODIFY `registration_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `registration_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

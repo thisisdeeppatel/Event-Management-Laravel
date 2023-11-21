@@ -169,7 +169,7 @@
 
  <footer class="footer mt-auto py-3 bg-body-tertiary">
     <div class="text-center p-3">
-    © 2023  Developed By :<span class="text-dark" > Deep Marsonia | Ronak Pipalva</span>
+    © 2023  Developed By :<span class="text-dark" > Deep Marsonia</span>
     </div>
 
 </footer>
