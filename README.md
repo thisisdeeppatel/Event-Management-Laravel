@@ -10,3 +10,5 @@ Specially **designed for Universities and large Organizations.**
 The "Event Management System in Laravel with Automated Certificate Generation" addresses challenges in managing and tracking events in large organizations or university campuses. The existing difficulties include time-consuming processes, inconsistency, and incomplete information on Google Maps for large areas.
 
 Built on the Laravel framework, the system offers a user-friendly interface for easy event creation, registration, data export, and certificate generation. Users can conveniently discover upcoming events, register, and access participation certificates, aided by Google Maps integration for venue navigation. The dashboard provides an overview of pending and completed events, allows venue and event management, and enables admins to export participant data. After marking an event as complete, users can generate beautifully designed certificates in PNG format using their registration ID.
+
+This project has been also hosted on AWS cloud using EC2 instance: https://youtu.be/qTSi41QQ_RQ
